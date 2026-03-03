@@ -12,8 +12,21 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-width: 0;
+}
+
+/* Fluid translation text: shrinks for long words so it stays readable and fits the card */
+.translation-display {
+  font-size: clamp(1.125rem, 1.5rem + 2vw, 3rem);
+  line-height: 1.2;
+  word-break: break-word;
+  hyphens: auto;
 }
